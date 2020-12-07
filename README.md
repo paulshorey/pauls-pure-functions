@@ -1,7 +1,7 @@
 # universal-common-scripts
 
 Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development.
-<p>&nsbp;</p>
+<p>&nbsp;</p>
 
 # Install
 
@@ -25,7 +25,7 @@ For now, **this can only be imported as an ES Module, for compatibility with fro
   import everything from "universal-common-scripts"
   ```
 
-<p>&nsbp;</p>
+<p>&nbsp;</p>
 
 # Use
 
@@ -47,7 +47,7 @@ The output will be something like this:
 The third parameter specifies how much preference is given to the original order. High number will make it hardly budge at all. Low number will make higher rated items float to the top more easily. See [documentation](#documentation-coming-soon).
 
 **This is much more useful with a much larger dataset of course!**
-<p>&nsbp;</p>
+<p>&nbsp;</p>
 
 ## Other functions
 
@@ -66,12 +66,12 @@ The third parameter specifies how much preference is given to the original order
 `parse_error_message()` Error messages come in all shapes and sizes. From simple string, to standard `new Error('...')` to Axios/fetch promises containing an error... Returns a string which you can display to your user, without fear.
 
 And many more...
-<p>&nsbp;</p>
+<p>&nbsp;</p>
 
 # Documentation coming soon
 
 For now, please read the code, inside `./src` folder. Standard [JSDoc](https://documentation.js.org/) format comments. Right now it's pretty straightforward - not too much content to dig through.
-<p>&nsbp;</p>
+<p>&nbsp;</p>
 
 # About
 
