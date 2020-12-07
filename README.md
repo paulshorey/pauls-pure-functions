@@ -3,20 +3,19 @@
 Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development.
 <p>&nbsp;</p>
 
-# Install
+# Installation:
 
-For now, **this can only be imported as an ES Module, for compatibility with front-end compilers like Webpack**. Node.js projects using CJS (CommonJS) please read on...
+For now, **this can only be imported as an ES Module, for compatibility with front-end compilers like Webpack**. If you already use ESM, **high five**! If your Node.js project still uses CJS (CommonJS), please read on...
 
 > ESM is the new standard on the web, but Node app deverlopers are slow to convert, because it's a pain in the butt. This is probably one reason why there are still so few Node.js back-ends. **The main benefit to Node.js is being able to use the same code on front-end and back-end. Ironically, this was not possible until recently.**
 
 1. **Use this easy shortcut [npm esm package](https://www.npmjs.com/package/esm) to include ES Modules into your CommonJS project:** \
-  [Great read - release statement from 2018](https://medium.com/web-on-the-edge/tomorrows-es-modules-today-c53d29ac448c) \
-  [ESM documentation on GitHub](https://github.com/standard-things/esm) \
+  [ESM documentation on GitHub](https://github.com/standard-things/esm) (also a great read: [release statement from 2018](https://medium.com/web-on-the-edge/tomorrows-es-modules-today-c53d29ac448c)) \
   (1) wrap your project code in a decorator function (2) or add `esm` as a flag when you start your server
 
-2. **Or convert your Node.js app to ESM,** (1) add `"type":"module"` to `package.json`, and (2) start your server with the `--experimental-specifier-resolution=node` flag. Go through your entire code base, and convert all `require` statements to `import`. Then make sure that all your node_modules are still compatible. Fun! But good to do if you're just starting out. You'll still be able to include CommonJS files as before.
+2. **Or, convert your Node.js app to ESM,** (1) add `"type":"module"` to `package.json`, and (2) start your server with the `--experimental-specifier-resolution=node` flag. Go through your entire code base, and convert all `require` statements to `import`. Then make sure that all your node_modules are still compatible. Fun! But good to do if you're just starting out. You'll still be able to include CommonJS files as before.
 
-## Finally, you'll be able to:
+## Import:
   ```
   import { asort_by_rating_and_position } from "universal-common-scripts/src/asort_strings"
   // or:
