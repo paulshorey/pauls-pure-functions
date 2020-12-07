@@ -21,9 +21,5 @@
     }
   },
   "type": "module",
-  "main": "./src/index.js",
-  "module": "./src/index.js",
-  "exports": {
-    "default": "./src/index.js"
-  }
+  "main": "./src/index.js"
 }
