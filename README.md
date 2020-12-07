@@ -1,11 +1,10 @@
-# 📚 universal-common-scripts 📚
+# 📚 universal-common-functions 📚
 
 Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development.
 <p>&nbsp;</p>
 
 # Installation:
-
-For now, **this can only be imported as an ES Module, for compatibility with front-end compilers like Webpack**. If you already use ESM, **high five**! If your Node.js project still uses CJS (CommonJS), please read on...
+For Node, currently **this can only be imported as an ES Module, for compatibility with front-end compilers like Webpack**. If you already use ESM, **high five**! If your Node.js project still uses CJS (CommonJS), please read on...
 
 > ESM is the new standard on the web, but Node app deverlopers are slow to convert, because it's a pain in the butt. This is probably one reason why there are still so few Node.js back-ends. **The main benefit to Node.js is being able to use the same code on front-end and back-end. Ironically, this was not possible until recently.**
 
@@ -17,11 +16,11 @@ For now, **this can only be imported as an ES Module, for compatibility with fro
 
 ### Import:
   ```
-  import { asort_by_rating_and_position } from "universal-common-scripts/src/asort_strings"
+  import { asort_by_rating_and_position } from "universal-common-functions/src/asort_strings"
   // or:
-  import string_sort_functions from "universal-common-scripts/src/asort_strings"
+  import string_sort_functions from "universal-common-functions/src/asort_strings"
   // or:
-  import everything from "universal-common-scripts"
+  import everything from "universal-common-functions"
   ```
 
 <p>&nbsp;</p>
@@ -69,7 +68,7 @@ And many more...
 
 # Documentation pages coming soon
 
-For now, please read the JSDoc (comments) above each function in the [./src](https://github.com/paulshorey/universal-common-scripts/tree/main/src) folder:
+For now, please read the JSDoc (comments) above each function in the [./src](https://github.com/paulshorey/universal-common-functions/tree/main/src) folder:
 ![documentation example](docs/examples/asort_objects_by_property.png)
 
 <p>&nbsp;</p>
