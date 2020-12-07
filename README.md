@@ -15,8 +15,9 @@ For now, **this can only be imported as an ES Module, for compatibility with fro
   (1) wrap your project code in a decorator function (2) or add `esm` as a flag when you start your server
 
 2. **Or convert your Node.js app to ESM,** (1) add `"type":"module"` to `package.json`, and (2) start your server with the `--experimental-specifier-resolution=node` flag. Go through your entire code base, and convert all `require` statements to `import`. Then make sure that all your node_modules are still compatible. Fun! But good to do if you're just starting out. You'll still be able to include CommonJS files as before.
+
+## Finally, you'll be able to:
   ```
-  // recommended:
   import { asort_by_rating_and_position } from "universal-common-scripts/src/asort_strings"
   // or:
   import string_sort_functions from "universal-common-scripts/src/asort_strings"
