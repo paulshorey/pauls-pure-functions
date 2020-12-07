@@ -29,7 +29,7 @@ For now, **this can only be imported as an ES Module, for compatibility with fro
 
 # Use
 
-## Example: `asort_by_rating_and_position()` algorithmic sort
+### Example: `asort_by_rating_and_position()` algorithmic sort function:
 
 You have a list of cities, ordered from your most to least favorite, and a cost of living index for each:
 ```
@@ -49,7 +49,7 @@ The third parameter specifies how much preference is given to the original order
 **This is much more useful with a much larger dataset of course!**
 <p>&nbsp;</p>
 
-## Other functions
+### Other functions:
 
 `str_hash()` to make a unique number out of a long or short string of text. Not for security or cryptography, but helps a lot to make a unique ID.
 
@@ -68,9 +68,9 @@ The third parameter specifies how much preference is given to the original order
 And many more...
 <p>&nbsp;</p>
 
-# Documentation coming soon
+# Documentation pages coming soon
 
-For now, please read the code, inside `./src` folder. Standard [JSDoc](https://documentation.js.org/) format comments. Right now it's pretty straightforward - not too much content to dig through.
+For now, please read the JSDoc comments above each function - in [./src](https://github.com/paulshorey/universal-common-scripts/tree/main/src) folder. It's pretty straightforward - not too much content to dig through.
 <p>&nbsp;</p>
 
 # About
