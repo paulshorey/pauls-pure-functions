@@ -26,7 +26,7 @@ For now, **this can only be imported as an ES Module, for compatibility with fro
 
 <p>&nbsp;</p>
 
-# Use
+# Library of functions:
 
 ### Example: `asort_by_rating_and_position()` algorithmic sort function:
 
