@@ -1,4 +1,4 @@
-# universal-common-scripts
+# 📚 universal-common-scripts 📚
 
 Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development.
 <p>&nbsp;</p>
@@ -70,7 +70,9 @@ And many more...
 
 # Documentation pages coming soon
 
-For now, please read the JSDoc comments above each function - in [./src](https://github.com/paulshorey/universal-common-scripts/tree/main/src) folder. It's pretty straightforward - not too much content to dig through.
+For now, please read the JSDoc (comments) above each function in the [./src](https://github.com/paulshorey/universal-common-scripts/tree/main/src) folder.
+![documentation example](docs/examples/asort_objects_by_property.png)
+
 <p>&nbsp;</p>
 
 # About

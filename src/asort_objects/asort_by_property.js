@@ -1,14 +1,19 @@
 /**
- * Sort array of objects - by property value in each object
- * @param arr {Array.<Object>} - array of objects
- * @param prop1_key {object} - property key name to sort by - each object in array must contain this
- * @param prop1_asc {boolean} - by default, will sort prop1 DESC, but if this is true, will sort ASC
+ * Sort array of objects by property
+ *    ```
+ *      let list = [{name:'Pasha',age:8}, {name:'Masha',age:9}]
+ *      asort_objects_by_property(list, 'age') // Masha will move up to first place
+ *    ```
+ *    Like `asort_objects_by_property_and_position()`, but without caring about the position.
+ *    NOTE: your original array will be modified. Use [...arr] destructuring to keep immutable.
+ * @param arr {Array.<Object>} - array of objects to be sorted
+ * @param prop1_key {string} - property to use, to sort by. Each object in array must contain this key
+ * @param prop1_asc {boolean} - by default, will sort DESC, but if this is true, will sort ASC
  * @return {Array.<Object>} - array of objects, sorted
  */
 export default function asort_objects_by_property(arr, prop1_key, prop1_asc = false) {
   return arr.sort(asort_objects_by_property__helper.bind({ arr, prop1_key, prop1_asc }));
 };
-
 // helper function:
 function asort_objects_by_property__helper(a, b) {
   // sort by rating
@@ -25,4 +30,3 @@ function asort_objects_by_property__helper(a, b) {
     return b_rating - a_rating;
   }
 }
-
