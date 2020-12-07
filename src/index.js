@@ -23,7 +23,7 @@ import * as ui from "./ui.js"
 import * as urls from "./urls.js"
 import * as words from "./words.js"
 
-let all = {
+let ucf = {
   asort_objects: {
     by_property: asort_objects_by_property,
     by_property_and_position: asort_objects_by_property_and_position,
@@ -54,4 +54,8 @@ let all = {
   words
 }
 
-export default all
+if (typeof window === 'object') {
+  window.ucf = ucf
+}
+
+export default ucf

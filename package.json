@@ -1,7 +1,7 @@
 {
-  "name": "universal-common-scripts",
-  "version": "0.1.3",
-  "description": "Local module, import as a node module path. Install with `npm link ./path/to/here`",
+  "name": "universal-common-functions",
+  "version": "0.1.5",
+  "description": "An unfinished library of useful functions for data manipulation in JavaScript. Also abstractions to help with everyday web development, working with URL queries, network requests, promises, etc.",
   "private": false,
   "dependencies": {},
   "devDependencies": {
