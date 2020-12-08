@@ -1,7 +1,7 @@
 'use strict';
 
 var exports$1 = require('.');
-var urls = require('./urls-059628a6.js');
+var urls = require('./urls-d02ce0a0.js');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -171,9 +171,13 @@ const http_put = function (url = ``, data = {}) {
 };
 if (typeof window === 'object') {
   // set up for export
-  window.ppf = window.ppf||{};
-  // export to specific section. User can choose to download one or several of these files
-  window.ppf['requests'] = exports__default['default'];
+  window.__ = window.__||{};
+  // flatten
+  for (let func in exports__default['default']) {
+    window.__[func] = exports__default['default'][func];
+  }
+  // alternatively, maybe export to namespace?
+  // window.ppf['arrays'] = exports// flatten
 }
 
 var requests = /*#__PURE__*/Object.freeze({

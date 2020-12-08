@@ -1,7 +1,7 @@
 'use strict';
 
 var exports$1 = require('.');
-var string = require('./string-b736edbc.js');
+var string = require('./string-d07ac856.js');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -69,12 +69,14 @@ function querystring_replace_key_value(queryString, key, value) {
   return string.str_trim_char(output, "&")
 }
 if (typeof window === 'object') {
-  // export to window object
-  window.ppf = window.ppf||{};
+  // set up for export
+  window.__ = window.__||{};
   // flatten
   for (let func in exports__default['default']) {
-    window.ppf[func] = exports__default['default'][func];
+    window.__[func] = exports__default['default'][func];
   }
+  // alternatively, maybe export to namespace?
+  // window.ppf['arrays'] = exports// flatten
 }
 
 var urls = /*#__PURE__*/Object.freeze({

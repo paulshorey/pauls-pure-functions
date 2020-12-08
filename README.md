@@ -14,10 +14,10 @@ Lodash did not have certain things that I needed. And, I did not want to constan
 
 **Node.js ES6 Modules** - High five! You can haz tree shaking! You may have to add ".js" to the filename, depending on your configuration.
   ```
-  // use "src" folder
-  import { sort_by_rating_and_position } from "pauls-pure-functions/src/sort_strings"
+  // use "esm" folder
+  import { sort_by_rating_and_position } from "pauls-pure-functions/esm/sort_strings"
   // or:
-  import * as string_sort_functions from "pauls-pure-functions/src/sort_strings"
+  import * as string_sort_functions from "pauls-pure-functions/esm/sort_strings"
   // or:
   import everything from "pauls-pure-functions"
   ```
@@ -25,7 +25,7 @@ Lodash did not have certain things that I needed. And, I did not want to constan
 **Node.js Common JS** - consider converting your project to {"type":"module"}. Or use the handy [npm esm package](https://www.npmjs.com/package/esm)
   ```
   // use "cjs" folder
-  const string_sort_functions = require("pauls-pure-functions/src/sort_strings")
+  const string_sort_functions = require("pauls-pure-functions/esm/sort_strings")
   // or:
   const everything = require("pauls-pure-functions")
   ```

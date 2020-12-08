@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 require('.');
-var json = require('./json-50ac0634.js');
+var json = require('./json-5de832fa.js');
 
 
 

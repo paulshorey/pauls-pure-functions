@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var exports$1 = require('.');
-var sort_objects_by_property_and_position$1 = require('./sort_objects_by_property_and_position-a7cc2b70.js');
+var sort_objects_by_property_and_position$1 = require('./sort_objects_by_property_and_position-ffeb4423.js');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 

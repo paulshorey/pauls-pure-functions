@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 require('.');
-var sort_words = require('./sort_words-0a91a292.js');
+var sort_words = require('./sort_words-7933a57b.js');
 
 
 

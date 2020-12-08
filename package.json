@@ -1,14 +1,14 @@
 {
   "name": "pauls-pure-functions",
-  "version": "0.2.15",
+  "version": "1.0.0",
   "description": "A growing library of useful functions for data manipulation in JavaScript. Also abstractions to help with everyday web development, working with URL queries, network requests, promises, etc.",
   "private": false,
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
     "build": "npm run cjs && npm run dist && rm -rf __ && mv dist __",
-    "dist": "rm -rf .parcel-cache && parcel build ./src/*",
-    "cjs": "rollup ./src/*.js --format cjs --dir cjs/ --exports auto"
+    "dist": "rm -rf .parcel-cache && parcel build esm/*",
+    "cjs": "rollup esm/*.js --format cjs --dir cjs/ --exports auto"
   },
   "targets": {
     "app": {
@@ -17,5 +17,7 @@
       }
     }
   },
-  "type": "module"
+  "type": "module",
+  "module": "./esm",
+  "main": "./cjs"
 }
