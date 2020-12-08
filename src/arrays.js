@@ -121,11 +121,11 @@ export function arr_truthy_values (arr) {
 import exports from '.' // this is lazy, and temporary - will later rewrite object of exports manually
 if (typeof window === 'object') {
   // set up for export
-  window.ppf = window.ppf||{}
+  window.__ = window.__||{}
   // flatten
   for (let func in exports) {
-    window.ppf[func] = exports[func]
+    window.__[func] = exports[func]
   }
   // alternatively, maybe export to namespace?
-  // window.ppf['arrays'] = exports// flatten
+  // window.__['arrays'] = exports// flatten
 }

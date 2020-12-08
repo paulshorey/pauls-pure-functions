@@ -3,13 +3,14 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 require('.');
-var objects = require('./objects-c5f45a6b.js');
+var objects = require('./objects-08018be4.js');
 
 
 
 exports.json_parse = objects.json_parse;
+exports.obj_first_entry = objects.obj_first_entry;
 exports.obj_first_value = objects.obj_first_value;
-exports.obj_from_array = objects.obj_from_array;
 exports.obj_is_empty = objects.obj_is_empty;
-exports.obj_is_equal = objects.obj_is_equal;
 exports.obj_merge = objects.obj_merge;
+exports.object_keys_from_array_values = objects.object_keys_from_array_values;
+exports.objects_are_equal = objects.objects_are_equal;

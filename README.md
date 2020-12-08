@@ -1,40 +1,42 @@
 # 📚 pauls-pure-functions 📚
 
-Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development.
-![example](docs/examples/arrays_diff.png)
+Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development. Please use and contribute.
+![example1](docs/examples/object_keys_from_array.png)
 <p>&nbsp;</p>
 
 # Why?
 
-Lodash did not have certain things that I needed. And, I did not want to constantly re-invent the wheel and search for code snippets. With this, I can import one or several functions at a time, as needed, without importing an entire library! Lodash does have ES6 compatible tree shaking now, so do check that one out first. It will be much more reliably tested and documented than this. Currently working on testing, documenting, and adding more functions to this library.
+Lodash did not have certain things that I needed. And, I did not want to constantly re-invent the wheel and search for code snippets. With this, I can import one or several functions at a time, as needed, without importing an entire library! Lodash does have ES6 compatible tree shaking and pure functions now, so do check out [lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide) as well. Currently working on testing and documenting this library. It's a bit neglected. Just finished the build process for browsers! [Try it out in this CodePen!](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012)
 <p>&nbsp;</p>
 
 # Installation:
 
-**In Node.js ES6 Modules** - **high five!**! You can use tree shaking! You may have to add ".js" to the filename, depending on your configuration.
+**Node.js ES6 Modules** - High five! You can haz tree shaking! You may have to add ".js" to the filename, depending on your configuration.
   ```
   // use "src" folder
-  import { asort_by_rating_and_position } from "pauls-pure-functions/src/asort_strings"
+  import { asort_by_rating_and_position } from "pauls-pure-functions/src/sort_strings"
   // or:
-  import string_sort_functions from "pauls-pure-functions/src/asort_strings"
+  import * as string_sort_functions from "pauls-pure-functions/src/sort_strings"
   // or:
   import everything from "pauls-pure-functions"
   ```
 
-**For Node.js Common JS** - consider converting your project to {"type":"module"}, or using the handy npm [esm package](https://www.npmjs.com/package/esm)
+**Node.js Common JS** - consider converting your project to {"type":"module"}. Or use the handy [npm esm package](https://www.npmjs.com/package/esm)
   ```
   // use "cjs" folder
-  const string_sort_functions = require("pauls-pure-functions/src/asort_strings")
+  const string_sort_functions = require("pauls-pure-functions/src/sort_strings")
   // or:
   const everything = require("pauls-pure-functions")
   ```
 
-**In browser** - this script will add a `window.ppf` variable when you include everything (`index.js`). Tree shaking will be supported in the future.
+**In browser, this script will create a `window.__` variable** with a flat list of functions. This is different. In Node, you import/require and set the name of each variable
 ```
-  <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/dist/index.js"></script>
-```
+  <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/browser/index.js"></script>
 
-### Import:
+  <!-- or get a specific file, without loading the whole library: -->
+  <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/browser/sort_strings.js"></script>
+```
+The newly created `window.__` object of functions will contain one object called `_map`. It's a reference to which file each function originates from.
 
 
 <p>&nbsp;</p>
@@ -96,7 +98,7 @@ As I make write (or find on Stackoverflow) a new function for myself/clients/emp
 # Documentation pages coming soon
 
 For now, please read the JSDoc (comments) above each function in the [./src](https://github.com/paulshorey/pauls-pure-functions/tree/main/src) folder. Please bear with me. I'm currently completing all the documentation. After that's done, will compile it into several markdown files in the `./docs` folder and link to them.
-![documentation example](docs/examples/asort_objects_by_property.png)
+![example2](docs/examples/arrays_diff.png)
 
 <p>&nbsp;</p>
 
@@ -104,5 +106,4 @@ For now, please read the JSDoc (comments) above each function in the [./src](htt
 
 I use these functions in https://besta.domains, https://wordio.co, https://paulshorey.com, and others. I treat these as my code snippets. If it seems like it will be useful in the future, not just for the project at hand, but for many different projects, then I include the script into this library. If you'd like to contribute, please don't be shy. Lets build something together! ~ [Paul Shorey .com](https://paulshorey.com)
 
-
-
+![example3](docs/examples/asort_objects_by_property.png)

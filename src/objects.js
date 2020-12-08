@@ -3,31 +3,50 @@
  * @param {object} obj2
  * @returns {boolean} - true if equal
  */
-export const obj_is_equal = function obj_is_equal(obj1, obj2) {
+export const objects_are_equal = function objects_are_equal(obj1, obj2) {
   return JSON.stringify(obj1) === JSON.stringify(obj2)
 }
 
 /**
- * @param {array} arr
- * @returns {object}
+ * Create an object from array. Object's keys will made from Array's values.
+ *    Use this to filter an array, keep only unique values, and maybe make something of them.
+ *    This might be faster than using ES6 `[...new Set(...arr)]`, because it loops only once.
+ * @param {array} arr - array values will be used, keys ignored
+ * @param {*} value - any value to assign to the new object key
+ *    Default value = true
+ * @returns {object} - from array values. Duplicate array values have been removed.
  */
-export const obj_from_array = function obj_from_array(arr, default_value=true) {
+export const object_keys_from_array_values = function obj_from_array(arr, value=true) {
   let obj = {}
   for (let key of arr) {
-    obj[key] = default_value
+    obj[key] = value
   }
   return obj
 }
 
 /**
+ * Return the first value in an object
+ *    Iterate the object only once. Return the first value.
  * @param {object} obj
  * @returns value of first item in object
  */
 export const obj_first_value = function obj_first_value(obj) {
-  for (let key in obj) {
-    let val = obj[key]
-    return val
-    break // idk, just in case
+  for (let key in obj) { // doesn't loop, but that's the point!
+    return obj[key]
+    break // idk, just paranoid
+  }
+}
+
+/**
+ * Return the first entry (key and value tuple) in an object
+ *    Iterate the object only once. Return the first entry.
+ * @param {object} obj
+ * @returns value of first item in object
+ */
+export const obj_first_entry = function obj_first_value(obj) {
+  for (let key in obj) { // doesn't loop, but that's the point!
+    return [key, obj[key]]
+    break // idk, just paranoid
   }
 }
 
@@ -158,11 +177,11 @@ export const obj_merge = function obj_merge(obj1, obj2) {
 import exports from '.' // this is lazy, and temporary - will later rewrite object of exports manually
 if (typeof window === 'object') {
   // set up for export
-  window.ppf = window.ppf||{}
+  window.__ = window.__||{}
   // flatten
   for (let func in exports) {
-    window.ppf[func] = exports[func]
+    window.__[func] = exports[func]
   }
   // alternatively, maybe export to namespace?
-  // window.ppf['arrays'] = exports// flatten
+  // window.__['arrays'] = exports// flatten
 }
