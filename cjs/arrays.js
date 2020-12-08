@@ -2,7 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var arrays = require('./arrays-45ab2ce1.js');
+require('.');
+var arrays = require('./arrays-516a1805.js');
 
 
 

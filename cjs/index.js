@@ -1,24 +1,25 @@
 'use strict';
 
-var arrays = require('./arrays-45ab2ce1.js');
-var cli = require('./cli-1896ceac.js');
-var functions = require('./functions-fd1302e3.js');
+require('.');
+var arrays = require('./arrays-516a1805.js');
+var cli = require('./cli-b67e0388.js');
+var functions = require('./functions-ff292ec8.js');
 var sort_strings_combine_lists = require('./sort_strings_combine_lists-52455d6a.js');
 var sort_objects_by_property_and_position = require('./sort_objects_by_property_and_position-a7cc2b70.js');
-var sort_words = require('./sort_words-3711c072.js');
-var strings = require('./strings-85c08367.js');
-var numbers = require('./numbers-af33ade1.js');
-var objects = require('./objects-36f81150.js');
-var promises = require('./promises-d0894a9a.js');
-var req = require('./req-8def5b5a.js');
-var string = require('./string-0ea18386.js');
-var urls = require('./urls-3b06f005.js');
-var requests = require('./requests-72673ced.js');
-var json = require('./json-7d5cf663.js');
-var ui = require('./ui-16fe8385.js');
-var words = require('./words-07afb830.js');
+var sort_words = require('./sort_words-2244fb21.js');
+var strings = require('./strings-4244c7de.js');
+var numbers = require('./numbers-21716da0.js');
+var objects = require('./objects-c5f45a6b.js');
+var promises = require('./promises-9b0e8438.js');
+var req = require('./req-d8aefb4b.js');
+var string = require('./string-34ea3bc7.js');
+var urls = require('./urls-22aa4507.js');
+var requests = require('./requests-37ac99c3.js');
+var json = require('./json-ca628c1c.js');
+var ui = require('./ui-2cd7a31d.js');
+var words = require('./words-99a9e95a.js');
 
-let ppf = {
+let all = {
   sort_objects: {
     sort_objects_by_property: sort_objects_by_property_and_position.sort_objects_by_property,
     sort_objects_by_property_and_position: sort_objects_by_property_and_position._sort_objects_by_property_and_position,
@@ -49,8 +50,21 @@ let ppf = {
   words: words.words
 };
 
+
+/**
+ * Export to browser window
+ */
 if (typeof window === 'object') {
-  window.ppf = ppf;
+  window.ppf = {_map:{}};
+  // assign each function to object - but flatten - exports flat list
+  // also construct map of types.names - to help user decide which individual functions to include
+  for (let type in all) {
+    window.ppf._map[type] = [];
+    for (let func in all[type]) {
+      window.ppf[func] = all[type][func];
+      window.ppf._map[type].push(func);
+    }
+  }
 }
 
-module.exports = ppf;
+module.exports = all;

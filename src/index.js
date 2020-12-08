@@ -23,7 +23,7 @@ import * as ui from "./ui.js"
 import * as urls from "./urls.js"
 import * as words from "./words.js"
 
-let ppf = {
+let all = {
   sort_objects: {
     sort_objects_by_property,
     sort_objects_by_property_and_position,
@@ -54,8 +54,21 @@ let ppf = {
   words
 }
 
+
+/**
+ * Export to browser window
+ */
 if (typeof window === 'object') {
-  window.ppf = ppf
+  window.ppf = {_map:{}}
+  // assign each function to object - but flatten - exports flat list
+  // also construct map of types.names - to help user decide which individual functions to include
+  for (let type in all) {
+    window.ppf._map[type] = []
+    for (let func in all[type]) {
+      window.ppf[func] = all[type][func]
+      window.ppf._map[type].push(func)
+    }
+  }
 }
 
-export default ppf
+export default all

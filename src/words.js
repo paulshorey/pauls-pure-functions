@@ -17,3 +17,19 @@ export const is_vowel = function syllable_count(str) {
 export const ends_in_vowel = function syllable_count(str) {
   return ["a", "e", "i", "o", "u", "y"].includes(str[str.length-1])
 }
+
+
+/**
+ * Export to browser window
+ */
+import exports from '.' // this is lazy, and temporary - will later rewrite object of exports manually
+if (typeof window === 'object') {
+  // set up for export
+  window.ppf = window.ppf||{}
+  // flatten
+  for (let func in exports) {
+    window.ppf[func] = exports[func]
+  }
+  // alternatively, maybe export to namespace?
+  // window.ppf['arrays'] = exports// flatten
+}

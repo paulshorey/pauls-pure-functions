@@ -2,9 +2,10 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var promises = require('./promises-d0894a9a.js');
+require('.');
+var promises = require('./promises-9b0e8438.js');
 
 
 
-exports.for_each_async = promises.for_each_async;
+exports.for_each_promise_all = promises.for_each_promise_all;
 exports.sleep = promises.sleep;

@@ -64,3 +64,19 @@ export const str_syllables_count = function str_syllables_count(word) {
   let match = word.match(/[aeiouy]{1,2}/g)
   return match ? match.length : 0 //word.scan(/[aeiouy]{1,2}/).size
 }
+
+
+/**
+ * Export to browser window
+ */
+import exports from '.' // this is lazy, and temporary - will later rewrite object of exports manually
+if (typeof window === 'object') {
+  // set up for export
+  window.ppf = window.ppf||{}
+  // flatten
+  for (let func in exports) {
+    window.ppf[func] = exports[func]
+  }
+  // alternatively, maybe export to namespace?
+  // window.ppf['arrays'] = exports// flatten
+}

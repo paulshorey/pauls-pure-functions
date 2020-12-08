@@ -150,3 +150,19 @@ export const obj_merge = function obj_merge(obj1, obj2) {
   // console.log('obj', obj);
   return obj
 }
+
+
+/**
+ * Export to browser window
+ */
+import exports from '.' // this is lazy, and temporary - will later rewrite object of exports manually
+if (typeof window === 'object') {
+  // set up for export
+  window.ppf = window.ppf||{}
+  // flatten
+  for (let func in exports) {
+    window.ppf[func] = exports[func]
+  }
+  // alternatively, maybe export to namespace?
+  // window.ppf['arrays'] = exports// flatten
+}

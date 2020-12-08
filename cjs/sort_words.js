@@ -2,7 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var sort_words = require('./sort_words-3711c072.js');
+require('.');
+var sort_words = require('./sort_words-2244fb21.js');
 
 
 

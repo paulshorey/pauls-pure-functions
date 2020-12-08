@@ -2,8 +2,28 @@ export const sleep = function(ms = 0) {
   return new Promise(r => setTimeout(r, ms))
 }
 
-export const for_each_async = async function(array, fn) {
-  for (let t of array) {
-    await fn(t)
+/**
+ * Returns output of function when executed on each item in array
+ *    when fn is asynchronous (returns a Promise)
+ */
+export const for_each_promise_all = function(array, fn) {
+  return Promise.all(array.map(function(item){
+    return fn(item)
+  }))
+}
+
+
+/**
+ * Export to browser window
+ */
+import exports from '.' // this is lazy, and temporary - will later rewrite object of exports manually
+if (typeof window === 'object') {
+  // set up for export
+  window.ppf = window.ppf||{}
+  // flatten
+  for (let func in exports) {
+    window.ppf[func] = exports[func]
   }
+  // alternatively, maybe export to namespace?
+  // window.ppf['arrays'] = exports// flatten
 }

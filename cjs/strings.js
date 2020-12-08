@@ -2,7 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var strings = require('./strings-85c08367.js');
+require('.');
+var strings = require('./strings-4244c7de.js');
 
 
 

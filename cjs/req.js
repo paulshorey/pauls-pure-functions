@@ -2,7 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var req = require('./req-8def5b5a.js');
+require('.');
+var req = require('./req-d8aefb4b.js');
 
 
 

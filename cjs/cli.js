@@ -2,7 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var cli = require('./cli-1896ceac.js');
+require('.');
+var cli = require('./cli-b67e0388.js');
 
 
 

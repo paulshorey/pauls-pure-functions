@@ -2,7 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var numbers = require('./numbers-af33ade1.js');
+require('.');
+var numbers = require('./numbers-21716da0.js');
 
 
 

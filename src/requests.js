@@ -162,3 +162,19 @@ export const http_put = function (url = ``, data = {}) {
     body: JSON.stringify(data) // body data type must match "Content-Type" header
   }).then((response) => response.json()) // parses response to JSON
 }
+
+
+/**
+ * Export to browser window
+ */
+import exports from '.' // this is lazy, and temporary - will later rewrite object of exports manually
+if (typeof window === 'object') {
+  // set up for export
+  window.ppf = window.ppf||{}
+  // flatten
+  for (let func in exports) {
+    window.ppf[func] = exports[func]
+  }
+  // alternatively, maybe export to namespace?
+  // window.ppf['arrays'] = exports// flatten
+}

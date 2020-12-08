@@ -2,7 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var functions = require('./functions-fd1302e3.js');
+require('.');
+var functions = require('./functions-ff292ec8.js');
 
 
 

@@ -2,7 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var objects = require('./objects-36f81150.js');
+require('.');
+var objects = require('./objects-c5f45a6b.js');
 
 
 
