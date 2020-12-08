@@ -4,19 +4,16 @@ Library of useful functions like underscore/lodash. Very small. No dependencies.
 ![example](docs/examples/arrays_diff.png)
 <p>&nbsp;</p>
 
+# Why?
+
+Lodash did not have certain things that I needed. And, I did not want to constantly re-invent the wheel and search for code snippets. With this, I can import one or several functions at a time, as needed, without importing an entire library! Lodash does have ES6 compatible tree shaking now, so do check that one out first. It will be much more reliably tested and documented than this. Currently working on testing, documenting, and adding more functions to this library.
+<p>&nbsp;</p>
+
 # Installation:
-For Node, currently **this can only be imported as an ES Module, for compatibility with front-end compilers like Webpack**. If you already use ESM, **high five**! If your Node.js project still uses CJS (CommonJS), please read on...
 
-> ESM is the new standard on the web, but Node app deverlopers are slow to convert, because it's a pain in the butt. This is probably one reason why there are still so few Node.js back-ends. **The main benefit to Node.js is being able to use the same code on front-end and back-end. Ironically, this was not possible until recently.**
-
-1. **Use this easy shortcut [npm esm package](https://www.npmjs.com/package/esm) to include ES Modules into your CommonJS project:** \
-  [ESM documentation on GitHub](https://github.com/standard-things/esm) (also a great read: [release statement from 2018](https://medium.com/web-on-the-edge/tomorrows-es-modules-today-c53d29ac448c)) \
-  (1) wrap your project code in a decorator function (2) or add `esm` as a flag when you start your server
-
-2. **Or, convert your Node.js app to ESM,** (1) add `"type":"module"` to `package.json`, and (2) start your server with the `--experimental-specifier-resolution=node` flag. Go through your entire code base, and convert all `require` statements to `import`. Then make sure that all your node_modules are still compatible. Fun! But good to do if you're just starting out. You'll still be able to include CommonJS files as before.
-
-### Import:
+**In Node.js ES6 Modules** - **high five!**! You can use tree shaking! You may have to add ".js" to the filename, depending on your configuration.
   ```
+  // use "src" folder
   import { asort_by_rating_and_position } from "pauls-pure-functions/src/asort_strings"
   // or:
   import string_sort_functions from "pauls-pure-functions/src/asort_strings"
@@ -24,11 +21,27 @@ For Node, currently **this can only be imported as an ES Module, for compatibili
   import everything from "pauls-pure-functions"
   ```
 
+**For Node.js Common JS** - consider converting your project to {"type":"module"}, or using the handy npm [esm package](https://www.npmjs.com/package/esm)
+  ```
+  // use "cjs" folder
+  const string_sort_functions = require("pauls-pure-functions/src/asort_strings")
+  // or:
+  const everything = require("pauls-pure-functions")
+  ```
+
+**In browser** - this script will add a `window.ppf` variable when you include everything (`index.js`). Tree shaking will be supported in the future.
+```
+  <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/dist/index.js"></script>
+```
+
+### Import:
+
+
 <p>&nbsp;</p>
 
 # Library of functions:
 
-### Example: `asort_by_rating_and_position()` algorithmic sort function:
+### For example: `asort_by_rating_and_position()` algorithmic sort function:
 
 You have a list of cities, ordered from your most to least favorite, and a cost of living index for each:
 ```
@@ -48,11 +61,13 @@ The third parameter specifies how much preference is given to the original order
 **This is much more useful with a much larger dataset of course!**
 <p>&nbsp;</p>
 
-### Other functions:
+### Universal functions:
 
 `str_hash()` to make a unique number out of a long or short string of text. Not for security or cryptography, but helps a lot to make a unique ID.
 
 `syllable_count()` returns number of syllables for a given word
+
+`arr_remove_item()` removes a value from an array, by value
 
 `ends_in_vowel()` returns true if the input word ends in a vowel
 
@@ -64,7 +79,18 @@ The third parameter specifies how much preference is given to the original order
 
 `parse_error_message()` Error messages come in all shapes and sizes. From simple string, to standard `new Error('...')` to Axios/fetch promises containing an error... Returns a string which you can display to your user, without fear.
 
-And many more...
+### For browser only:
+
+`load_script()` loads a script file into your document
+
+### For node.js only:
+
+`parse_cli_args()` gets arguments passed to NodeJS process when it was started
+
+### And many more
+
+As I make a new problem for myself, and sometimes for clients/employers, I copy the function to this library. Please contribute your own. Let's combine efforts!
+
 <p>&nbsp;</p>
 
 # Documentation pages coming soon

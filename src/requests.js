@@ -13,7 +13,11 @@ export const load_script = function (source, beforeEl, scriptAttrs = {}) {
     let script = document.createElement("script")
 
     // force certain attributes
-    script = { ...script, async: true, defer: true, ...scriptAttrs }
+    script.async = true
+    script.defer = true
+    for (let key in scriptAttrs) {
+      script[key] = scriptAttrs[key]
+    }
 
     // NOTE: needs refactor: maybe .bind(script)
     function onloadHander(_, isAbort) {
