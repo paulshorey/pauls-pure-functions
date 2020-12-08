@@ -6,8 +6,7 @@ Library of useful functions like underscore/lodash. Very small. No dependencies.
 
 # Why?
 
-Lodash did not have certain things that I needed. And, I did not want to constantly re-invent the wheel and search for code snippets. With this, I can import one or several functions at a time, as needed, without importing an entire library! Lodash does have ES6 compatible tree shaking and pure functions now, so do check out [lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide) as well. Currently working on testing and documenting this library. Just finished the build process for browsers! \
-[Try it out in this CodePen!](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012)
+Lodash did not have certain things that I needed. And, I did not want to constantly re-invent the wheel and search for code snippets. With this, I can import one or several functions at a time, as needed, without importing an entire library! Lodash does have ES6 compatible tree shaking and pure functions now, so do check out [lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide) as well. Currently working on testing and documenting this library. Just finished the build process for browsers!
 <p>&nbsp;</p>
 
 # Installation:
@@ -80,7 +79,7 @@ The third parameter specifies how much preference is given to the original order
 
 `for_each_promise_all()` returns a Promise - like a [].forEach, executes the function on each value in array - but with Promises
 
-`call_later()` a tasty and healthy curry! See [CodePen example](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012). Play around with this and other functions.
+`call_later()` a taste of curry - define the function and arguments seprately, to be called later.
 
 `parse_error_message()` Error messages come in all shapes and sizes. From simple string, to standard `new Error('...')` to Axios/fetch promises containing an error... Returns a string which you can display to your user, without fear.
 
