@@ -89,7 +89,7 @@ The third parameter specifies how much preference is given to the original order
 
 ### And many more
 
-As I make a new problem for myself, and sometimes for clients/employers, I copy the function to this library. Please contribute your own. Let's combine efforts!
+As I make write (or find on Stackoverflow) a new function for myself/clients/employers, I copy it to this library. Please contribute your own. Let's combine efforts!
 
 <p>&nbsp;</p>
 
