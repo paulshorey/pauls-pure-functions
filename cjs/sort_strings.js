@@ -18,13 +18,13 @@ let sort_strings_by_rating_and_position = sort_strings_combine_lists$1.sort_stri
 let sort_strings_combine_lists = sort_strings_combine_lists$1.sort_strings_combine_lists;
 if (typeof window === 'object') {
   // set up for export
-  window.__ = window.__||{};
+  window.ppf = window.ppf||{};
   // flatten
   for (let func in exports__default['default']) {
-    window.__[func] = exports__default['default'][func];
+    window.ppf[func] = exports__default['default'][func];
   }
   // alternatively, maybe export to namespace?
-  // window.__['arrays'] = exports// flatten
+  // window.ppf['arrays'] = exports// flatten
 }
 
 exports.sort_strings_by_extension = sort_strings_by_extension;
