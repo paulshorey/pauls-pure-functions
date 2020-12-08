@@ -12,9 +12,10 @@ Lodash did not have certain things that I needed. And, I did not want to constan
 
 # Installation:
 
-**Node.js ES6 Modules** - High five! You can haz tree shaking! You may have to add ".js" to the filename, depending on your configuration.
+## Node.js ES6 Modules
+High five! You can haz tree shaking! You may have to add ".js" to the filename, depending on your configuration.
   ```
-  // use "esm" folder
+  // NOTE: import from "esm" folder:
   import { sort_by_rating_and_position } from "pauls-pure-functions/esm/sort_strings"
   // or:
   import * as string_sort_functions from "pauls-pure-functions/esm/sort_strings"
@@ -22,19 +23,22 @@ Lodash did not have certain things that I needed. And, I did not want to constan
   import everything from "pauls-pure-functions"
   ```
 
-**Node.js Common JS** - consider converting your project to {"type":"module"}. Or use the handy [npm esm package](https://www.npmjs.com/package/esm)
+## Node.js Common JS
+consider converting your project to {"type":"module"}. Or use the handy [npm esm package](https://www.npmjs.com/package/esm)
   ```
-  // use "cjs" folder
+  // NOTE: import from "cjs" folder:
   const string_sort_functions = require("pauls-pure-functions/esm/sort_strings")
-  // or:
+  // or get everything:
   const everything = require("pauls-pure-functions")
   ```
 
-**In browser, this script will create a `window.__` variable** with a flat list of functions. This is different. In Node, you import/require and you choose what to call each variable.
+## Browser
+this script will create a `window.__` variable** with a flat list of functions. This is different. In Node, you import/require and you choose what to call each variable.
 ```
+  <!-- NOTE: import from "__" folder -->
   <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/__/index.js"></script>
 
-  <!-- or get a specific file, without loading the whole library: -->
+  <!-- or get a specific set of functions, without loading the whole library: -->
   <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/__/sort_strings.js"></script>
 ```
 The newly created `window.__` object of functions will contain one object called `_map`. It's a reference to which file each function originates from.
