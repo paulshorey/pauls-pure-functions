@@ -1,12 +1,13 @@
 # 📚 pauls-pure-functions 📚
 
-Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development. Please use and contribute. **Please tell me what I should name this!**
+Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development. Please use and contribute.
 ![example1](docs/examples/object_keys_from_array_values.png)
 <p>&nbsp;</p>
 
 **Try it out in CodeSandbox.io:** \
 [Node.js CJS example](https://codesandbox.io/s/nodejs-express-api-sandbox-hl2rz)
-[ES6 Modules example](https://codesandbox.io/s/nodejs-express-api-sandbox-hl2rz)
+[ES6 Modules example](https://codesandbox.io/s/pauls-pure-functions-cculn)
+PLEASE NOTE: this project `version 0` will not be stable until `version 1`. Function names will change! **If you like this idea, please help me decide what to name this project, and how to best organize/name the functions!**
 <p>&nbsp;</p>
 
 # Why?
