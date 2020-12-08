@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Mix multiple lists of strings into one list, by taking one item from each
  *    Takes unlimited number of arguments, but each must be an array!
@@ -6,28 +8,28 @@
  * @params strs3 {array} - array of strings
  * @returns {array} - new array (immutable), aggregated
  */
-export function arr_mix (arrays) {
-  let master_list = []
+function arr_mix (arrays) {
+  let master_list = [];
   // find length of longest array
-  let max_length = 0
+  let max_length = 0;
   for (let arr of arrays) {
-    max_length = Math.max(arr.length, max_length)
+    max_length = Math.max(arr.length, max_length);
   }
 
   // iterate by index
   // check item at each index in each array
-  let index = 0
+  let index = 0;
   while (true) {
     // add one item from each array
     for (let arr of arrays) {
       if (arr[index]) {
         // add item if exists
-        master_list.push(arr[index])
+        master_list.push(arr[index]);
       }
     }
 
     // next index
-    index++
+    index++;
     if (index >= max_length) {
       break
     }
@@ -41,17 +43,17 @@ export function arr_mix (arrays) {
  * @param arr {array}
  * @returns {number}
  */
-export function arr_length (arr) {
+function arr_length (arr) {
   return arr && arr.length ? arr.length : 0
 }
 
 /**
  * Create an array
  */
-export function arr_from_value (value, len) {
-  let arr = []
+function arr_from_value (value, len) {
+  let arr = [];
   for (let i = 0; i < len; i++) {
-    arr.push(value)
+    arr.push(value);
   }
   return arr
 }
@@ -66,7 +68,7 @@ export function arr_from_value (value, len) {
  * @param b {array} - second array
  * @returns {array} - returns an array of values which only appear once, not in both arrays
  */
-export function arrays_diff (a=[], b=[]) {
+function arrays_diff (a=[], b=[]) {
   let combined = a.concat(b);
   return combined.filter( el => {
     if ( !a.includes(el) || !b.includes(el) )
@@ -81,7 +83,7 @@ export function arrays_diff (a=[], b=[]) {
  * @param b {array} - for comparison only. Array values unique to B will be ignored
  * @returns {array} - returns an array of values which appear in A but not B
  */
-export function arr_subtract (a=[], b=[]) {
+function arr_subtract (a=[], b=[]) {
   return a.filter(function (i) {
     return !b.includes(i)
   })
@@ -90,7 +92,7 @@ export function arr_subtract (a=[], b=[]) {
 /**
  * Remove an item (if exact match string/number) from array
  */
-export function arr_remove_item (arr=[], item='') {
+function arr_remove_item (arr=[], item='') {
   return arr.filter(it=>it!==item)
 }
 
@@ -100,7 +102,7 @@ export function arr_remove_item (arr=[], item='') {
  * @param b {array}
  * @returns {array} - returns an array with values which appear in both A and B
  */
-export function arr_includes (a, b) {
+function arr_includes (a, b) {
   return a.filter(function (i) {
     return b.includes(i)
   })
@@ -111,6 +113,28 @@ export function arr_includes (a, b) {
  * @param arr {array}
  * @returns {array}
  */
-export function arr_truthy_values (arr) {
+function arr_truthy_values (arr) {
   return arr.filter((val) => !!val)
 }
+
+var arrays = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  arr_mix: arr_mix,
+  arr_length: arr_length,
+  arr_from_value: arr_from_value,
+  arrays_diff: arrays_diff,
+  arr_subtract: arr_subtract,
+  arr_remove_item: arr_remove_item,
+  arr_includes: arr_includes,
+  arr_truthy_values: arr_truthy_values
+});
+
+exports.arr_from_value = arr_from_value;
+exports.arr_includes = arr_includes;
+exports.arr_length = arr_length;
+exports.arr_mix = arr_mix;
+exports.arr_remove_item = arr_remove_item;
+exports.arr_subtract = arr_subtract;
+exports.arr_truthy_values = arr_truthy_values;
+exports.arrays = arrays;
+exports.arrays_diff = arrays_diff;

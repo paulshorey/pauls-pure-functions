@@ -1,4 +1,4 @@
-import { str_trim_char } from "./strings.js"
+import { str_trim_char } from "./string.js"
 
 /**
  * Convert JavaScript Object to URL querystring
@@ -44,7 +44,7 @@ export function object_from_querystring(str = "") {
  * @param value {string} - ex: "species"
  * @return {string} - ex: "?start=10&species=apple"
  */
-export function queryStringReplaceKeyValue(queryString, key, value) {
+export function querystring_replace_key_value(queryString, key, value) {
   // clean input
   queryString = str_trim_char(queryString, "&")
   queryString = str_trim_char(queryString, "?")

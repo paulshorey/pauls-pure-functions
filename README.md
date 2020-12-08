@@ -1,6 +1,7 @@
-# 📚 universal-common-functions 📚
+# 📚 pauls-pure-functions 📚
 
 Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development.
+![example](docs/examples/arrays_diff.png)
 <p>&nbsp;</p>
 
 # Installation:
@@ -16,11 +17,11 @@ For Node, currently **this can only be imported as an ES Module, for compatibili
 
 ### Import:
   ```
-  import { asort_by_rating_and_position } from "universal-common-functions/src/asort_strings"
+  import { asort_by_rating_and_position } from "pauls-pure-functions/src/asort_strings"
   // or:
-  import string_sort_functions from "universal-common-functions/src/asort_strings"
+  import string_sort_functions from "pauls-pure-functions/src/asort_strings"
   // or:
-  import everything from "universal-common-functions"
+  import everything from "pauls-pure-functions"
   ```
 
 <p>&nbsp;</p>
@@ -68,7 +69,7 @@ And many more...
 
 # Documentation pages coming soon
 
-For now, please read the JSDoc (comments) above each function in the [./src](https://github.com/paulshorey/universal-common-functions/tree/main/src) folder:
+For now, please read the JSDoc (comments) above each function in the [./src](https://github.com/paulshorey/pauls-pure-functions/tree/main/src) folder. Please bear with me. I'm currently completing all the documentation. After that's done, will compile it into several markdown files in the `./docs` folder and link to them.
 ![documentation example](docs/examples/asort_objects_by_property.png)
 
 <p>&nbsp;</p>

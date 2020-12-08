@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Anonymous function wrapper - more reliable than ;(()=>{ ... })()
  *    Probem is anonymous function sometimes fails silently, even in try/catch !
@@ -6,20 +8,28 @@
  * @param tryCode
  * @param catchAction
  */
-export const try_catch = (tryCode, catchAction) => {
+const try_catch = (tryCode, catchAction) => {
   try {
     // hopefully it works:
-    tryCode()
+    tryCode();
   } catch (err) {
     // something broke!
-    typeof cconsole === "object" ? cconsole.error(err) : console.error(err)
+    typeof cconsole === "object" ? cconsole.error(err) : console.error(err);
     // stop and inspect
     if (catchAction === "exit" && typeof process !== "undefined") {
       // exit - only on node
-      process.exit()
+      process.exit();
     } else {
       // debug - will only stop script if you have DevTools opened
       debugger
     }
   }
-}
+};
+
+var functions = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  try_catch: try_catch
+});
+
+exports.functions = functions;
+exports.try_catch = try_catch;
