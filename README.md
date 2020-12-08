@@ -4,10 +4,14 @@ Library of useful functions like underscore/lodash. Very small. No dependencies.
 ![example1](docs/examples/object_keys_from_array_values.png)
 <p>&nbsp;</p>
 
+**Try it out in CodeSandbox.io:** \
+[Node.js CJS example](https://codesandbox.io/s/nodejs-express-api-sandbox-hl2rz)
+[ES6 Modules example](https://codesandbox.io/s/nodejs-express-api-sandbox-hl2rz)
+<p>&nbsp;</p>
+
 # Why?
 
-Lodash did not have certain things that I needed. And, I did not want to constantly re-invent the wheel and search for code snippets. With this, I can import one or several functions at a time, as needed, without importing an entire library! Lodash does have ES6 compatible tree shaking and pure functions now, so do check out [lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide) as well. Currently working on testing and documenting this library. Just finished the build process for browsers! \
-[Try it out in this CodePen!](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012)
+Lodash did not have certain things that I needed. And, I did not want to constantly re-invent the wheel and search for code snippets. With this, I can import one or several functions at a time, as needed, without importing an entire library! Lodash does have ES6 compatible tree shaking and pure functions now, so do check out [lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide) as well. Currently working on testing and documenting this library. Just finished the build process for browsers!
 <p>&nbsp;</p>
 
 # Installation:
