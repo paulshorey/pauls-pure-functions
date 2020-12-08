@@ -23,10 +23,10 @@ export default function sort_strings_by_matches_in_list(arr, matchList, immutabl
 		}
 		ratings[str] = count;
 	}
-	return arr.sort(sort_by_matches_in_list__helper.bind(ratings));
+	return arr.sort(sort_strings_by_matches_in_list__helper.bind(ratings));
 };
 
-function sort_by_matches_in_list__helper(a, b) {
+function sort_strings_by_matches_in_list__helper(a, b) {
 	let a_score = this[a] || 0;
 	let b_score = this[b] || 0;
 	return b_score - a_score;

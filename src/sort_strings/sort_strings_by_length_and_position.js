@@ -43,15 +43,15 @@ export default function sort_strings_by_length_and_position(arr, prefer_position
     }
     that.delta_length = that.max_length - that.min_length
     // done
-    return arr.sort(sort_by_length_and_position_asc__helper.bind(that))
+    return arr.sort(sort_strings_by_length_and_position_asc__helper.bind(that))
   } catch (e) {
-    console.error('invalid input array to sort_by_length_and_position()')
+    console.error('invalid input array to sort_strings_by_length_and_position()')
     return arr
   }
 };
 
 // helper function:
-function sort_by_length_and_position_asc__helper(a, b) {
+function sort_strings_by_length_and_position_asc__helper(a, b) {
   // if length is less than absolute minimum, use absolute minimum
   let a_length = a.length
   let b_length = b.length

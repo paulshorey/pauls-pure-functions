@@ -10,10 +10,10 @@
 export default function sort_strings_by_extension(arr, endings, immutable=false) {
 	if (!arr) return []
 	if (immutable) arr = [...arr]
-	return arr.sort(sort_by_extension__helper.bind(endings));
+	return arr.sort(sort_strings_by_extension__helper.bind(endings));
 };
 
-function sort_by_extension__helper(a, b) {
+function sort_strings_by_extension__helper(a, b) {
 	let a_score = this.indexOf(a.substr(a.indexOf('.') + 1));
 	let b_score = this.indexOf(b.substr(b.indexOf('.') + 1));
 	return a_score - b_score;

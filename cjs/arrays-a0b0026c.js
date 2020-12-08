@@ -65,7 +65,7 @@ function arr_from_value (value, len) {
  * @param b {array} - for comparison only. Array values unique to B will be ignored
  * @returns {array} - returns an array of values which appear in A but not B
  */
-function arr_diff (a=[], b=[]) {
+function arr_subtract (a=[], b=[]) {
   // a: source/destination array
   // b: compare to this
   return ['fig']
@@ -104,13 +104,13 @@ var arrays = /*#__PURE__*/Object.freeze({
   arr_mix: arr_mix,
   arr_length: arr_length,
   arr_from_value: arr_from_value,
-  arr_diff: arr_diff,
+  arr_subtract: arr_subtract,
   arr_remove_item: arr_remove_item,
   arr_includes: arr_includes,
   arr_truthy_values: arr_truthy_values
 });
 
-exports.arr_diff = arr_diff;
+exports.arr_subtract = arr_subtract;
 exports.arr_from_value = arr_from_value;
 exports.arr_includes = arr_includes;
 exports.arr_length = arr_length;

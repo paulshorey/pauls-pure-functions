@@ -10,12 +10,12 @@
  *       if false or undefined, will be sorted ascending
  * @returns {array} arr - also modifies original array to returned value!
  */
-export const sort_by_length = function (arr, desc = false) {
-	let sort_func = help_sort_by_length.bind({desc});
+export const sort_strings_by_length = function (arr, desc = false) {
+	let sort_func = help_sort_strings_by_length.bind({desc});
 	return arr.sort(sort_func);
 };
 /**
- * Sort input array NOT JUST by number of characters in string (like sort_by_length),
+ * Sort input array NOT JUST by number of characters in string (like sort_strings_by_length),
  * but instead, sort by width of the "word".
  *       Words with many short letters ("i" and "l") will be treated as having fewer characters.
  *       Especially nice glyphs like "ll" or "li" will be preferred.
@@ -27,8 +27,8 @@ export const sort_by_length = function (arr, desc = false) {
  *       if false or undefined, will be sorted ascending
  * @returns {array} arr - also modifies original array to returned value!
  */
-export const sort_by_width = function (arr, desc = false) {
-	let sort_func = help_sort_by_width.bind({desc});
+export const sort_strings_by_width = function (arr, desc = false) {
+	let sort_func = help_sort_strings_by_width.bind({desc});
 	return arr.sort(sort_func);
 };
 
@@ -39,10 +39,10 @@ export const sort_by_width = function (arr, desc = false) {
  */
 
 /**
- * Usage: `[].sort(help_sort_by_length)`
+ * Usage: `[].sort(help_sort_strings_by_length)`
  * Note: NOT EXPORTED
  */
-function help_sort_by_length(a, b) {
+function help_sort_strings_by_length(a, b) {
 	let desc = this.desc;
 	if (desc) {
 		return b.toString().length - a.toString().length;
@@ -51,12 +51,12 @@ function help_sort_by_length(a, b) {
 }
 
 /**
- * Usage: `[].sort(help_sort_by_width)`
+ * Usage: `[].sort(help_sort_strings_by_width)`
  *      String "width" is like "".length, but accounts for width of each character.
  *      It is not a JavaScript prototype, but is custom made from character map.
  * Note: NOT EXPORTED
  */
-function help_sort_by_width(a, b) {
+function help_sort_strings_by_width(a, b) {
 	let desc = this.desc;
 	let a_width = str_width(JSON.stringify(a || ''));
 	let b_width = str_width(JSON.stringify(b || ''));
