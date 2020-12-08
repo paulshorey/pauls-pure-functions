@@ -11,6 +11,7 @@ import * as arrays from "./arrays.js"
 import * as sort_words from "./sort_words.js"
 import * as strings from "./strings.js"
 import * as cli from "./cli.js"
+import * as curry from "./curry.js"
 import * as functions from "./etc.js"
 import * as numbers from "./numbers.js"
 import * as objects from "./objects.js"
@@ -41,6 +42,7 @@ let all = {
   sort_words,
   strings,
   cli,
+  curry,
   functions,
   numbers,
   objects,
