@@ -12,8 +12,7 @@ export const objects_are_equal = function objects_are_equal(obj1, obj2) {
  *    Use this to filter an array, keep only unique values, and maybe make something of them.
  *    This might be faster than using ES6 `[...new Set(...arr)]`, because it loops only once.
  * @param {array} arr - array values will be used, keys ignored
- * @param {*} value - any value to assign to the new object key
- *    Default value = true
+ * @param {*} value - any value to assign to each new item in object. Default value = true.
  * @returns {object} - from array values. Duplicate array values have been removed.
  */
 export const object_keys_from_array_values = function obj_from_array(arr, value=true) {

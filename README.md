@@ -1,12 +1,12 @@
 # 📚 pauls-pure-functions 📚
 
-Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development. Please use and contribute.
+Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development. Please use and contribute. **Please tell me what I should name this!**
 ![example1](docs/examples/object_keys_from_array_values.png)
 <p>&nbsp;</p>
 
 # Why?
 
-Lodash did not have certain things that I needed. And, I did not want to constantly re-invent the wheel and search for code snippets. With this, I can import one or several functions at a time, as needed, without importing an entire library! Lodash does have ES6 compatible tree shaking and pure functions now, so do check out [lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide) as well. Currently working on testing and documenting this library. Just finished the build process for browsers!
+Lodash did not have certain things that I needed. And, I did not want to constantly re-invent the wheel and search for code snippets. With this, I can import one or several functions at a time, as needed, without importing an entire library! Lodash does have ES6 compatible tree shaking and pure functions now, so do check out [lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide) as well. Currently working on testing and documenting this library. Just finished the build process for browsers! \
 [Try it out in this CodePen!](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012)
 <p>&nbsp;</p>
 
