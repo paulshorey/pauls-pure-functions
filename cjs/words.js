@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 require('.');
-var words = require('./words-99a9e95a.js');
+var words = require('./words-88e4f58c.js');
 
 
 

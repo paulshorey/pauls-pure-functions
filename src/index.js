@@ -59,14 +59,14 @@ let all = {
  * Export to browser window
  */
 if (typeof window === 'object') {
-  window.ppf = {_map:{}}
+  window.__ = {_map:{}}
   // assign each function to object - but flatten - exports flat list
   // also construct map of types.names - to help user decide which individual functions to include
   for (let type in all) {
-    window.ppf._map[type] = []
+    window.__._map[type] = []
     for (let func in all[type]) {
-      window.ppf[func] = all[type][func]
-      window.ppf._map[type].push(func)
+      window.__[func] = all[type][func]
+      window.__._map[type].push(func)
     }
   }
 }

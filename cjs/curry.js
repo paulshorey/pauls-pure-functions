@@ -26,10 +26,10 @@ const call_later = function(func, args){
 };
 if (typeof window === 'object') {
   // set up for export
-  window.ppf = window.ppf||{};
+  window.__ = window.__||{};
   // flatten
   for (let func in exports__default['default']) {
-    window.ppf[func] = exports__default['default'][func];
+    window.__[func] = exports__default['default'][func];
   }
   // alternatively, maybe export to namespace?
   // window.ppf['arrays'] = exports// flatten

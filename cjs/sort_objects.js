@@ -13,10 +13,10 @@ let sort_objects_by_property = sort_objects_by_property_and_position$1.sort_obje
 let sort_objects_by_property_and_position = sort_objects_by_property_and_position$1._sort_objects_by_property_and_position;
 if (typeof window === 'object') {
   // set up for export
-  window.ppf = window.ppf||{};
+  window.__ = window.__||{};
   // flatten
   for (let func in exports__default['default']) {
-    window.ppf[func] = exports__default['default'][func];
+    window.__[func] = exports__default['default'][func];
   }
   // alternatively, maybe export to namespace?
   // window.ppf['arrays'] = exports// flatten
