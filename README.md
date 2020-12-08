@@ -6,7 +6,8 @@ Library of useful functions like underscore/lodash. Very small. No dependencies.
 
 # Why?
 
-Lodash did not have certain things that I needed. And, I did not want to constantly re-invent the wheel and search for code snippets. With this, I can import one or several functions at a time, as needed, without importing an entire library! Lodash does have ES6 compatible tree shaking and pure functions now, so do check out [lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide) as well. Currently working on testing and documenting this library. Just finished the build process for browsers!
+Lodash did not have certain things that I needed. And, I did not want to constantly re-invent the wheel and search for code snippets. With this, I can import one or several functions at a time, as needed, without importing an entire library! Lodash does have ES6 compatible tree shaking and pure functions now, so do check out [lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide) as well. Currently working on testing and documenting this library. Just finished the build process for browsers! \
+[Try it out in this CodePen!](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012)
 <p>&nbsp;</p>
 
 # Installation:
@@ -31,10 +32,10 @@ Lodash did not have certain things that I needed. And, I did not want to constan
 
 **In browser, this script will create a `window.__` variable** with a flat list of functions. This is different. In Node, you import/require and you choose what to call each variable.
 ```
-  <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/browser/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/__/index.js"></script>
 
   <!-- or get a specific file, without loading the whole library: -->
-  <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/browser/sort_strings.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/__/sort_strings.js"></script>
 ```
 The newly created `window.__` object of functions will contain one object called `_map`. It's a reference to which file each function originates from.
 
@@ -96,12 +97,13 @@ The third parameter specifies how much preference is given to the original order
 ### And many more
 
 As I make write (or find on Stackoverflow) a new function for myself/clients/employers, I copy it to this library. Please contribute your own. Let's combine efforts!
+See [CodePen example](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012). Play around with all the functions.
 
 <p>&nbsp;</p>
 
 # Documentation pages coming soon
 
-For now, please read the JSDoc (comments) above each function in the [./src](https://github.com/paulshorey/pauls-pure-functions/tree/main/src) folder. Please bear with me. I'm currently completing all the documentation. After that's done, will compile it into several markdown files in the `./docs` folder and link to them.
+**For now, please read the JSDoc** (comments) above each function in the [./src](https://github.com/paulshorey/pauls-pure-functions/tree/main/src) folder. Please bear with me. I'm currently completing all the documentation. After that's done, will compile it into several markdown files in the `./docs` folder and link to them.
 ![example2](docs/examples/arrays_diff.png)
 
 <p>&nbsp;</p>
