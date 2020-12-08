@@ -4,7 +4,7 @@ var arrays = require('./arrays-45ab2ce1.js');
 var cli = require('./cli-1896ceac.js');
 var functions = require('./functions-fd1302e3.js');
 var sort_strings_combine_lists = require('./sort_strings_combine_lists-52455d6a.js');
-var sort_objects_by_property_and_position = require('./sort_objects_by_property_and_position-fa96a1b2.js');
+var sort_objects_by_property_and_position = require('./sort_objects_by_property_and_position-a7cc2b70.js');
 var sort_words = require('./sort_words-3711c072.js');
 var strings = require('./strings-85c08367.js');
 var numbers = require('./numbers-af33ade1.js');
@@ -21,7 +21,7 @@ var words = require('./words-07afb830.js');
 let ppf = {
   sort_objects: {
     sort_objects_by_property: sort_objects_by_property_and_position.sort_objects_by_property,
-    sort_objects_by_property_and_position: sort_objects_by_property_and_position.sort_objects_by_property_and_position,
+    sort_objects_by_property_and_position: sort_objects_by_property_and_position._sort_objects_by_property_and_position,
   },
   sort_strings: {
     sort_strings_by_extension: sort_strings_combine_lists.sort_strings_by_extension,

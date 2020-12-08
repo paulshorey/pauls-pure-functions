@@ -1,11 +1,12 @@
 {
   "name": "pauls-pure-functions",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "A growing library of useful functions for data manipulation in JavaScript. Also abstractions to help with everyday web development, working with URL queries, network requests, promises, etc.",
   "private": false,
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
+    "build": "npm run parcel && npm run rollup",
     "parcel": "rm -rf .parcel-cache && parcel build ./src/*",
     "rollup": "rollup ./src/*.js --format cjs --dir cjs/ --exports auto"
   },

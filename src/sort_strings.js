@@ -1,15 +1,15 @@
-import sort_strings_by_extension from './sort_strings/sort_strings_by_extension.js';
-import sort_strings_by_length_and_position from './sort_strings/sort_strings_by_length_and_position.js';
-import sort_strings_by_length_asc from './sort_strings/sort_strings_by_length_asc.js';
-import sort_strings_by_matches_in_list from './sort_strings/sort_strings_by_matches_in_list.js';
-import sort_strings_by_rating from './sort_strings/sort_strings_by_rating.js';
-import sort_strings_by_rating_and_position from './sort_strings/sort_strings_by_rating_and_position.js';
-import sort_strings_combine_lists from './sort_strings/sort_strings_combine_lists.js';
+import _sort_strings_by_extension from './sort_strings/sort_strings_by_extension.js';
+import _sort_strings_by_length_and_position from './sort_strings/sort_strings_by_length_and_position.js';
+import _sort_strings_by_length_asc from './sort_strings/sort_strings_by_length_asc.js';
+import _sort_strings_by_matches_in_list from './sort_strings/sort_strings_by_matches_in_list.js';
+import _sort_strings_by_rating from './sort_strings/sort_strings_by_rating.js';
+import _sort_strings_by_rating_and_position from './sort_strings/sort_strings_by_rating_and_position.js';
+import _sort_strings_combine_lists from './sort_strings/sort_strings_combine_lists.js';
 
-export let sort_strings_by_extension = sort_strings_by_extension
-export let sort_strings_by_length_and_position = sort_strings_by_length_and_position
-export let sort_strings_by_length_asc = sort_strings_by_length_asc
-export let sort_strings_by_matches_in_list = sort_strings_by_matches_in_list
-export let sort_strings_by_rating = sort_strings_by_rating
-export let sort_strings_by_rating_and_position = sort_strings_by_rating_and_position
-export let sort_strings_combine_lists = sort_strings_combine_lists
+export let sort_strings_by_extension = _sort_strings_by_extension
+export let sort_strings_by_length_and_position = _sort_strings_by_length_and_position
+export let sort_strings_by_length_asc = _sort_strings_by_length_asc
+export let sort_strings_by_matches_in_list = _sort_strings_by_matches_in_list
+export let sort_strings_by_rating = _sort_strings_by_rating
+export let sort_strings_by_rating_and_position = _sort_strings_by_rating_and_position
+export let sort_strings_combine_lists = _sort_strings_combine_lists
