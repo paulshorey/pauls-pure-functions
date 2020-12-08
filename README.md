@@ -15,7 +15,7 @@ Lodash did not have certain things that I needed. And, I did not want to constan
 **Node.js ES6 Modules** - High five! You can haz tree shaking! You may have to add ".js" to the filename, depending on your configuration.
   ```
   // use "src" folder
-  import { asort_by_rating_and_position } from "pauls-pure-functions/src/sort_strings"
+  import { sort_by_rating_and_position } from "pauls-pure-functions/src/sort_strings"
   // or:
   import * as string_sort_functions from "pauls-pure-functions/src/sort_strings"
   // or:
@@ -30,7 +30,7 @@ Lodash did not have certain things that I needed. And, I did not want to constan
   const everything = require("pauls-pure-functions")
   ```
 
-**In browser, this script will create a `window.__` variable** with a flat list of functions. This is different. In Node, you import/require and set the name of each variable
+**In browser, this script will create a `window.__` variable** with a flat list of functions. This is different. In Node, you import/require and you choose what to call each variable.
 ```
   <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/browser/index.js"></script>
 
@@ -44,14 +44,14 @@ The newly created `window.__` object of functions will contain one object called
 
 # Library of functions:
 
-### For example: `asort_by_rating_and_position()` algorithmic sort function:
+### For example: `sort_by_rating_and_position()` algorithmic sort function:
 
 You have a list of cities, ordered from your most to least favorite, and a cost of living index for each:
 ```
 let cities = ['Zurich', 'Paris', 'Kansas City', 'New York', 'Copenhagen', 'Duluth']
 let ratings = { 'Zurich':1, 'Paris':1, 'Kansas City':10, 'New York':5, 'Copenhagen':5, 'Duluth':7 }
 
-console.log(asort_by_rating_and_position(cities, ratings, 0.1))
+console.log(sort_by_rating_and_position(cities, ratings, 0.1))
 ```
 The output will be something like this:
 ```
@@ -74,17 +74,21 @@ The third parameter specifies how much preference is given to the original order
 
 `ends_in_vowel()` returns true if the input word ends in a vowel
 
-`asort_objects_by_property()` just like `asort_by_rating_and_position()`, but instead of taking a list of items and object of ratings as separate parameters, it takes a list of objects, and sorts the list based on a property of each object.
+`sort_objects_by_property()` just like `sort_by_rating_and_position()`, but instead of taking a list of items and object of ratings as separate parameters, it takes a list of objects, and sorts the list based on a property of each object.
 
 `sleep()` returns a Promise after a number of milliseconds. Use with async/await to mimic other programming languages like Bash
 
-`forEachAsync()` returns a Promise when finished - executes a number of promises synchronously - good for executing an async callback on each item in an array
+`for_each_promise_all()` returns a Promise - like a [].forEach, executes the function on each value in array - but with Promises
+
+`call_later()` a tasty and healthy curry! See [CodePen example](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012). Play around with this and other functions.
 
 `parse_error_message()` Error messages come in all shapes and sizes. From simple string, to standard `new Error('...')` to Axios/fetch promises containing an error... Returns a string which you can display to your user, without fear.
 
 ### For browser only:
 
 `load_script()` loads a script file into your document
+
+`object_from_querystring()` and other URL utils
 
 ### For node.js only:
 
@@ -107,4 +111,4 @@ For now, please read the JSDoc (comments) above each function in the [./src](htt
 
 I use these functions in https://besta.domains, https://wordio.co, https://paulshorey.com, and others. I treat these as my code snippets. If it seems like it will be useful in the future, not just for the project at hand, but for many different projects, then I include the script into this library. If you'd like to contribute, please don't be shy. Lets build something together! ~ [Paul Shorey .com](https://paulshorey.com)
 
-![example3](docs/examples/asort_objects_by_property.png)
+![example3](docs/examples/sort_objects_by_property.png)
