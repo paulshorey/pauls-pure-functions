@@ -16,7 +16,7 @@ Lodash did not have certain things that I needed. And, I did not want to constan
 <p>&nbsp;</p>
 
 # Also check out:
-- [numjs](https://github.com/nicolaspanel/numjs) - JS version of Python's numpy
+- [numjs](https://github.com/nicolaspanel/numjs){:target="_blank"} - JS version of Python's numpy
 <p>&nbsp;</p>
 
 # Installation:
