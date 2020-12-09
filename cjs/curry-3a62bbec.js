@@ -1,3 +1,11 @@
+'use strict';
+
+var exports$1 = require('.');
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var exports__default = /*#__PURE__*/_interopDefaultLegacy(exports$1);
+
 /**
  * If you want to execute a function LATER
  * but want to set its arguments NOW...
@@ -11,7 +19,7 @@
  * @param {function} func - function you want to call later (to curry). It can be bound
  * @param {array} args - array of arguments (optional, but no need to use this without arguments)
  */
-export function call_later(func, args){
+function call_later(func, args){
   return function(){
     return func(args)
   }
@@ -33,26 +41,30 @@ export function call_later(func, args){
  * @param funcs {function} - keep adding arguments (functions)
  * @returns {function(*=): *}
  */
-export function compose(first, ...funcs) {
+function compose(first, ...funcs) {
   return function(x){
     return funcs.reduce(function(accumulator, func){
       return func(accumulator)
     },first(x))
   }
 }
-
-
-/**
- * Export to browser window
- */
-import exports from '.' // this is lazy, and temporary - will later rewrite object of exports manually
 if (typeof window === 'object') {
   // set up for export
-  window.__ = window.__||{}
+  window.__ = window.__||{};
   // flatten
-  for (let func in exports) {
-    window.__[func] = exports[func]
+  for (let func in exports__default['default']) {
+    window.__[func] = exports__default['default'][func];
   }
   // alternatively, maybe export to namespace?
   // window.ppf['arrays'] = exports// flatten
 }
+
+var curry = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  call_later: call_later,
+  compose: compose
+});
+
+exports.call_later = call_later;
+exports.compose = compose;
+exports.curry = curry;

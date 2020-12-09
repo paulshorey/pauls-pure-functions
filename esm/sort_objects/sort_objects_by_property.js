@@ -1,5 +1,7 @@
 /**
  * Sort array of objects by property
+ *    NOTE: this is just like _.sortBy() but can only sort by one property instead of multiple
+ *    This is simply a simplified copy of `sort_objects_by_property_and_position()`
  *    ```
  *      let list = [{name:'Pasha',age:8}, {name:'Masha',age:9}]
  *      sort_objects_by_property(list, 'age') // Masha will move up to first place

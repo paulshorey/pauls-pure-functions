@@ -3,6 +3,8 @@ import { str_trim_char } from "./string.js"
 /**
  * Convert JavaScript Object to URL querystring
  * ex: "?one=1&two=something"
+ * @param {object} params - JS Object of key-value query params
+ * @return {string} - starting with "?". Just that if empty object
  */
 export function querystring_from_object(params = {}) {
   let qs = Object.keys(params)
@@ -15,8 +17,10 @@ export function querystring_from_object(params = {}) {
 }
 
 /**
- * Convert URL querystring to JavaScript Object
+ * Parse the URL querystring to JavaScript Object
  * ex: "?one=1&two=something" => {one:1,two:'something'}
+ * @param {string} str - starting with "?"
+ * @return {object}
  */
 export function object_from_querystring(str = "") {
   // make object

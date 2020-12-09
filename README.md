@@ -1,18 +1,23 @@
 # 📚 pauls-pure-functions 📚
 
-Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development. Please use and contribute.
+Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development. Please contribute.
 ![example1](docs/examples/object_keys_from_array_values.png)
 <p>&nbsp;</p>
 
 [![npm package](https://img.shields.io/npm/v/pauls-pure-functions.svg)](https://www.npmjs.com/package/pauls-pure-functions)
 **Try it out in CodeSandbox.io:** \
 https://codesandbox.io/s/pauls-pure-functions-demo-esm-cculn
-PLEASE NOTE: this project `version 0` will not be stable until `version 1`. Function names will change! **If you like this library, please help me decide what to name it, and how to best organize/name the functions!**
 <p>&nbsp;</p>
 
 # Why?
 
-Lodash did not have certain things that I needed. And, I did not want to constantly re-invent the wheel and search for code snippets. With this, I can import one or several functions at a time, as needed, without importing an entire library! Lodash does have ES6 compatible tree shaking and pure functions now, so do check out [lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide) as well. Currently working on testing and documenting this library. Just finished the build process for browsers!
+Unlike Lodash, these functions are not limited to common data structures, but web development in general - like parsing URLs, making HTTP requests, seeing if the browser screen is Retina or not (that's not pure, but it's useful). My name for this library really needs some thought.
+
+I did not want to constantly re-invent the wheel and search for code snippets. Some of these functions are just like Lodash, but offer extra functionality (or less functionality). It all depends on the individual function.
+
+Currently working on testing and documenting this library. Just finished the build process for browsers!
+
+I'm still adding functions and changing existing ones. Will be renaming all the function and changing the structure. **PLEASE NOTE: this project (currently `version 0`) will not be stable until `version 1`.** Contact me (I don't have a mailing list) to be notified when this becomes stable and complete (probably not for another year).
 <p>&nbsp;</p>
 
 # Also check out:
@@ -103,6 +108,8 @@ This is much more useful with a much larger dataset of course!
 
 `object_from_querystring()` and other URL utils
 
+`is_retina()` true if on MacBook for example, or any other "retina" or higher resolution screen
+
 ### For node.js only:
 
 `parse_cli_args()` gets arguments passed to NodeJS process when it was started
@@ -125,4 +132,4 @@ See [CodePen example](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012). P
 
 I use these functions in https://besta.domains, https://wordio.co, https://paulshorey.com, and others. I treat these as my code snippets. If it seems like it will be useful in the future, not just for the project at hand, but for many different projects, then I include the script into this library. If you'd like to contribute, please don't be shy. Lets build something together! ~ [Paul Shorey .com](https://paulshorey.com)
 
-![example3](docs/examples/sort_objects_by_property.png)
+![example3](docs/examples/matrix_flatten_to_strings.png)
