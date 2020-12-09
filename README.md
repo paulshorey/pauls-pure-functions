@@ -1,7 +1,7 @@
 # 📚 pauls-pure-functions 📚
 
 Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development. Please contribute.
-![example1](docs/examples/object_keys_from_array_values.png)
+![object_keys_from_array_values](docs/examples/object_keys_from_array_values.png)
 <p>&nbsp;</p>
 
 [![npm package](https://img.shields.io/npm/v/pauls-pure-functions.svg)](https://www.npmjs.com/package/pauls-pure-functions)
@@ -18,6 +18,7 @@ I did not want to constantly re-invent the wheel and search for code snippets. S
 Currently working on testing and documenting this library. Just finished the build process for browsers!
 
 I'm still adding functions and changing existing ones. Will be renaming all the function and changing the structure. **PLEASE NOTE: this project (currently `version 0`) will not be stable until `version 1`.** Contact me (I don't have a mailing list) to be notified when this becomes stable and complete (probably not for another year).
+![for_each_promise_all](docs/examples/for_each_promise_all.png)
 <p>&nbsp;</p>
 
 # Also check out:
@@ -124,7 +125,7 @@ See [CodePen example](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012). P
 # Documentation pages coming soon
 
 **For now, please read the JSDoc** (comments) above each function in the [./src](https://github.com/paulshorey/pauls-pure-functions/tree/main/src) folder. Please bear with me. I'm currently completing all the documentation. After that's done, will compile it into several markdown files in the `./docs` folder and link to them.
-![example2](docs/examples/arrays_diff.png)
+![arrays_diff](docs/examples/arrays_diff.png)
 
 <p>&nbsp;</p>
 
@@ -132,4 +133,4 @@ See [CodePen example](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012). P
 
 I use these functions in https://besta.domains, https://wordio.co, https://paulshorey.com, and others. I treat these as my code snippets. If it seems like it will be useful in the future, not just for the project at hand, but for many different projects, then I include the script into this library. If you'd like to contribute, please don't be shy. Lets build something together! ~ [Paul Shorey .com](https://paulshorey.com)
 
-![example3](docs/examples/matrix_flatten_to_strings.png)
+![matrix_flatten_to_strings](docs/examples/matrix_flatten_to_strings.png)

@@ -1,12 +1,10 @@
+
 /**
- * If you want to execute a function LATER
- * but want to set its arguments NOW...
- * Let the curry simmer in the slow cooker until you're ready to eat it. :)
- * Useful with Promise.all or lists of values each of which you'd like to run through a function.
+ * If you want to execute a function LATER, but want to set its arguments NOW.
+ * Useful with Promise.all or lists of values each of which you need to set now
+ * (for some reason, IDK) but not ready to call the function yet
  * ```
  *    let toDoLater = __.call_later(console.warn, 'go for a run')
- *    // or
- *    __.for_each_promise_all([1000,2000,3000], __.call_later(__.sleep, 1000))
  * ```
  * @param {function} func - function you want to call later (to curry). It can be bound
  * @param {array} args - array of arguments (optional, but no need to use this without arguments)
