@@ -15,6 +15,10 @@ PLEASE NOTE: this project `version 0` will not be stable until `version 1`. Func
 Lodash did not have certain things that I needed. And, I did not want to constantly re-invent the wheel and search for code snippets. With this, I can import one or several functions at a time, as needed, without importing an entire library! Lodash does have ES6 compatible tree shaking and pure functions now, so do check out [lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide) as well. Currently working on testing and documenting this library. Just finished the build process for browsers!
 <p>&nbsp;</p>
 
+# Also check out:
+- [numjs](https://github.com/nicolaspanel/numjs) - JS version of Python's numpy
+<p>&nbsp;</p>
+
 # Installation:
 
 ## Node.js ES6 Modules
