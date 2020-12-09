@@ -70,7 +70,7 @@ The output will be something like this:
 
 The third parameter specifies how much preference is given to the original order. High number will make it hardly budge at all. Low number will make higher rated items float to the top more easily. See [documentation](#documentation-coming-soon).
 
-**This is much more useful with a much larger dataset of course!**
+This is much more useful with a much larger dataset of course!
 <p>&nbsp;</p>
 
 ### Universal functions:
