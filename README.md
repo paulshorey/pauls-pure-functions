@@ -18,7 +18,7 @@ Lodash did not have certain things that I needed. And, I did not want to constan
 # Installation:
 
 ## Node.js ES6 Modules
-High five! You can haz tree shaking! You may have to add ".js" to the filename, depending on your configuration.
+High five! Shake that tree!
   ```
   // NOTE: import from "esm" folder:
   import { sort_by_rating_and_position } from "pauls-pure-functions/esm/sort_strings"
@@ -38,7 +38,7 @@ consider converting your project to {"type":"module"}. Or use the handy [npm esm
   ```
 
 ## Browser
-this script will create a `window.__` variable** with a flat list of functions. This is different. In Node, you import/require and you choose what to call each variable.
+this script will create a `window.__` variable** with a flat list of functions. This is different. In Node, you import/require and you choose what to call each variable. **Replace "__" with a specific version number!**
 ```
   <!-- NOTE: import from "__" folder -->
   <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/__/index.js"></script>
