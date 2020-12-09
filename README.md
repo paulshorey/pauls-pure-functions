@@ -5,8 +5,7 @@ Library of useful functions like underscore/lodash. Very small. No dependencies.
 <p>&nbsp;</p>
 
 **Try it out in CodeSandbox.io:** \
-[Node.js CJS example](https://codesandbox.io/s/nodejs-express-api-sandbox-hl2rz)
-[ES6 Modules example](https://codesandbox.io/s/pauls-pure-functions-cculn)
+[Node.js CommonJS](https://codesandbox.io/s/nodejs-express-api-sandbox-hl2rz)
 PLEASE NOTE: this project `version 0` will not be stable until `version 1`. Function names will change! **If you like this idea, please help me decide what to name this project, and how to best organize/name the functions!**
 <p>&nbsp;</p>
 
