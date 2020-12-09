@@ -6,7 +6,7 @@ import { querystring_from_object } from "./urls.js"
  * @param {object} beforeEl - DOM element before which to insert the new <script> tag
  * @param {object} scriptAttrs - object of attributes to add to the new <script> tag
  */
-export const load_script = function (source, beforeEl, scriptAttrs = {}) {
+export function load_script (source, beforeEl, scriptAttrs = {}) {
   if (!source) return false
   if (typeof window !== "object" || typeof document !== "object") return false
   return new Promise((resolve, reject) => {
@@ -56,7 +56,7 @@ export const load_script = function (source, beforeEl, scriptAttrs = {}) {
  * @param {object} response - response from HTTP request or Error object
  * @returns {string} - nice readable text, meant for an alert popup in your front-end user interface
  */
-export const parse_error_message = function (response) {
+export function parse_error_message (response) {
   if (!response) return "!error"
   //
   // maybe input was a string, which is already an error message,
@@ -93,7 +93,7 @@ export const parse_error_message = function (response) {
  * @param {object} data
  * @returns {Promise}
  */
-export const http_get = function (url = ``, data = {}) {
+export function http_get (url = ``, data = {}) {
   // Auth
   // url = url;
   // Default options are marked with *
@@ -119,7 +119,7 @@ export const http_get = function (url = ``, data = {}) {
  * @param {object} data
  * @returns {Promise}
  */
-export const http_post = function (url = ``, data = {}) {
+export function http_post (url = ``, data = {}) {
   // Auth
   // url = url;
   // Default options are marked with *
@@ -144,7 +144,7 @@ export const http_post = function (url = ``, data = {}) {
  * @param {object} data
  * @returns {Promise}
  */
-export const http_put = function (url = ``, data = {}) {
+export function http_put (url = ``, data = {}) {
   // Auth
   // url = url;
   // Default options are marked with *

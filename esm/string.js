@@ -1,4 +1,4 @@
-export const str_hash = function (str) {
+export function str_hash (str) {
   let hash = 0
   if (str.length === 0) {
     return hash
@@ -11,25 +11,25 @@ export const str_hash = function (str) {
   return hash+''
 }
 
-export const str_capitalize = function (word) {
+export function str_capitalize (word) {
   return word.charAt(0).toUpperCase() + word.slice(1)
 }
 
-export const str_sanitize_loosely = function (word) {
+export function str_sanitize_loosely (word) {
   return word
     .replace(/_-/g, " ")
     .replace(/[^\w ]+/g, "")
     .toLowerCase()
     .trim()
 }
-export const str_sanitize_strictly = function (word) {
+export function str_sanitize_strictly (word) {
   return word
     .replace(/[^\w]+/g, "")
     .toLowerCase()
     .trim()
 }
 
-export const str_insert = function (string = "", index = 0, insert = "") {
+export function str_insert (string = "", index = 0, insert = "") {
   return string.substring(0, index) + insert + string.substring(index, string.length)
 }
 
@@ -39,7 +39,7 @@ export const str_insert = function (string = "", index = 0, insert = "") {
  * @param c {string} - remove this character (or characters) from start/end
  * @returns {void | string}
  */
-export const str_trim_char = function trim(s, c) {
+export function str_trim_char(s, c) {
   if (c === "]") c = "\\]"
   if (c === "\\") c = "\\\\"
   return s.replace(new RegExp("^[" + c + "]+|[" + c + "]+$", "g"), "")
@@ -50,11 +50,11 @@ export const str_trim_char = function trim(s, c) {
  * @param str {string} - string
  * @returns {string}
  */
-export const str_trim_non_alpha = function trim(str) {
+export function str_trim_non_alpha(str) {
   return str.replace(new RegExp("^[^a-z]+|[^a-z]+$", "gi"), "")
 }
 
-export const str_syllables_count = function str_syllables_count(word) {
+export function str_syllables_count(word) {
   word = word.toLowerCase() //word.downcase!
   if (word.length <= 3) {
     return 1
