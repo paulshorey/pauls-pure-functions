@@ -44,11 +44,6 @@ let all = {
  */
 let __ = {_map:{}}
 for (let type in all) {
-  console.log(type, typeof all[type], all[type])
-  if (!all[type]) {
-    throw new Error(type + ' does not exist in ' + (typeof all))
-    continue
-  }
   __._map[type] = []
   for (let func in all[type]) {
     __[func] = all[type][func]
@@ -64,4 +59,4 @@ if (typeof window === 'object') {
 }
 
 
-export default all
+export default __
