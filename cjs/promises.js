@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 require('.');
-var promises = require('./promises-37f835ae.js');
+var promises = require('./promises-b4d71ce7.js');
 
 
 
