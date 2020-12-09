@@ -87,7 +87,7 @@ function str_width(str) {
  ***************************************************************************************
  */
 
-const glyph_width_plus = {};
+const glyph_width_plus = {/* coming soon*/};
 const char_width_plus = {
 	'0': 7,
 	'1': 4,

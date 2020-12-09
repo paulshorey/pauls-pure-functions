@@ -134,4 +134,4 @@ See [CodePen example](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012). P
 
 I use these functions in https://besta.domains, https://wordio.co, https://paulshorey.com, and others. I treat these as my code snippets. As I program something, and come accross a useful snippet, I make a function of it, and store it in this library. If you'd like to contribute, please don't be shy. Lets build something together! ~ [Paul Shorey .com](https://paulshorey.com)
 
-![matrix_flatten_to_strings](docs/examples/matrix_flatten_to_strings3.png)
+![sort_strings_by_width](docs/examples/sort_strings_by_width.png)
