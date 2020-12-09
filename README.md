@@ -1,6 +1,6 @@
 # 📚 pauls-pure-functions 📚
 
-Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development. Please contribute.
+Library of useful functions. Like underscore/lodash, but more for web development and text analysis. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development. Please contribute.
 ![matrix_flatten_to_strings](docs/examples/matrix_flatten_to_strings3.png)
 <p>&nbsp;</p>
 
