@@ -7,7 +7,7 @@ Library of useful functions like underscore/lodash. Very small. No dependencies.
 [![npm package](https://img.shields.io/npm/v/pauls-pure-functions.svg)](https://www.npmjs.com/package/pauls-pure-functions)
 **Try it out in CodeSandbox.io:** \
 https://codesandbox.io/s/pauls-pure-functions-demo-esm-cculn
-PLEASE NOTE: this project `version 0` will not be stable until `version 1`. Function names will change! **If you like this idea, please help me decide what to name this project, and how to best organize/name the functions!**
+PLEASE NOTE: this project `version 0` will not be stable until `version 1`. Function names will change! **If you like this library, please help me decide what to name it, and how to best organize/name the functions!**
 <p>&nbsp;</p>
 
 # Why?
