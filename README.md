@@ -1,7 +1,7 @@
 # 📚 pauls-pure-functions 📚
 
 Library of useful functions like underscore/lodash. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development. Please contribute.
-![object_keys_from_array_values](docs/examples/object_keys_from_array_values.png)
+![matrix_flatten_to_strings](docs/examples/matrix_flatten_to_strings3.png)
 <p>&nbsp;</p>
 
 [![npm package](https://img.shields.io/npm/v/pauls-pure-functions.svg)](https://www.npmjs.com/package/pauls-pure-functions)
@@ -125,7 +125,8 @@ See [CodePen example](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012). P
 # Documentation pages coming soon
 
 **For now, please read the JSDoc** (comments) above each function in the [./src](https://github.com/paulshorey/pauls-pure-functions/tree/main/src) folder. Please bear with me. I'm currently completing all the documentation. After that's done, will compile it into several markdown files in the `./docs` folder and link to them.
-![arrays_diff](docs/examples/arrays_diff.png)
+![arrays_diff](docs/examples/arrays_diff2.png)
+![object_keys_from_array_values](docs/examples/object_keys_from_array_values2.png)
 
 <p>&nbsp;</p>
 
