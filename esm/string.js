@@ -1,3 +1,11 @@
+
+/**
+ * Quick easy unique hash generator. Not secure or cryptographic.
+ * Not guaranteed to be unique, but will almost always suffice.
+ * Good for generating IDs based on text content.
+ * Like when entering a new blog or content into a database, when you want to keep your content unique,
+ * you can do `let post_id = str_hash(post.author+post.title+post.body)`.
+ */
 export function str_hash (str) {
   let hash = 0
   if (str.length === 0) {

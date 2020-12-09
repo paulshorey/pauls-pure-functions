@@ -1,7 +1,8 @@
 # 📚 pauls-pure-functions 📚
 
 Library of useful functions. Like underscore/lodash, but more for web development and text analysis. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development. Please contribute.
-![matrix_flatten_to_strings](docs/examples/matrix_flatten_to_strings3.png)
+![sort_strings_by_width](docs/examples/sort_strings_by_width.png)
+![str_hash](docs/examples/str_hash.png)
 <p>&nbsp;</p>
 
 [![npm package](https://img.shields.io/npm/v/pauls-pure-functions.svg)](https://www.npmjs.com/package/pauls-pure-functions)
@@ -133,5 +134,4 @@ See [CodePen example](https://codepen.io/paulshorey/pen/bGweWaB?editors=0012). P
 # About
 
 I use these functions in https://besta.domains, https://wordio.co, https://paulshorey.com, and others. I treat these as my code snippets. As I program something, and come accross a useful snippet, I make a function of it, and store it in this library. If you'd like to contribute, please don't be shy. Lets build something together! ~ [Paul Shorey .com](https://paulshorey.com)
-
-![sort_strings_by_width](docs/examples/sort_strings_by_width.png)
+![matrix_flatten_to_strings](docs/examples/matrix_flatten_to_strings3.png)
