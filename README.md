@@ -24,6 +24,8 @@ I'm still adding functions and changing existing ones. Will be renaming all the 
 
 # Also check out:
 - [numjs](https://github.com/nicolaspanel/numjs){:target="_blank"} - JS version of Python's numpy
+- [javascript-algorithms](https://github.com/trekhleb/javascript-algorithms) - llists, stack, hash, trees, etc
+- [_](https://lodash.com/docs/4.17.15) - lodash documentation
 <p>&nbsp;</p>
 
 # Installation:
