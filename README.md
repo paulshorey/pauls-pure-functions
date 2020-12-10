@@ -35,9 +35,6 @@ I'm still adding functions and changing existing ones. Will be renaming all the 
 # Installation:
 
 ## Node.js ES6 Modules
-
-High five! Shake that tree!
-
 ```
 // NOTE: import from "esm" folder:
 import { sort_by_rating_and_position } from "pauls-pure-functions/esm/sort_strings"
@@ -48,9 +45,6 @@ import everything from "pauls-pure-functions"
 ```
 
 ## Node.js Common JS
-
-consider converting your project to {"type":"module"}. Or use the handy [npm esm package](https://www.npmjs.com/package/esm)
-
 ```
 // NOTE: import from "cjs" folder:
 const string_sort_functions = require("pauls-pure-functions/esm/sort_strings")
@@ -59,15 +53,15 @@ const everything = require("pauls-pure-functions")
 ```
 
 ## Browser
-
-this script will create a `window.__` variable with a flat list of functions. This is different. In Node, you import/require and you choose what to call each variable. **Replace "\_\_" with a specific version number!**
+This script will create a `window.__` variable with a flat list of functions.
 
 ```
   <!-- NOTE: import from "__" folder -->
-  <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/__/index.js"></script>
+  <!-- IMPORTANT: Replace "@latest" with a specific version number! -->
+  <script src="https://cdn.jsdelivr.net/npm/pauls-pure-functions@latest/__/index.js"></script>
 
-  <!-- or get a specific set of functions, without loading the whole library: -->
-  <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/__/sort_strings.js"></script>
+  <!-- or get just one category of functions, without downloading the entire library: -->
+  <script src="https://cdn.jsdelivr.net/npm/pauls-pure-functions@latest/__/arrays.js"></script>
 ```
 
 The newly created `window.__` object of functions will contain one object called `_map`. It's a reference to which file each function originates from.
