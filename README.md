@@ -3,11 +3,13 @@
 Library of useful functions. Like underscore/lodash, but more for web development and text analysis. Very small. No dependencies. A collection of various random useful scripts for data manipulation and modern web development. Please contribute.
 ![sort_strings_by_width](docs/examples/sort_strings_by_width.png)
 ![str_hash](docs/examples/str_hash.png)
+
 <p>&nbsp;</p>
 
 [![npm package](https://img.shields.io/npm/v/pauls-pure-functions.svg)](https://www.npmjs.com/package/pauls-pure-functions)
 **Try it out in CodeSandbox.io:** \
 https://codesandbox.io/s/pauls-pure-functions-demo-esm-cculn
+
 <p>&nbsp;</p>
 
 # Why?
@@ -20,38 +22,46 @@ Currently working on testing and documenting this library. Just finished the bui
 
 I'm still adding functions and changing existing ones. Will be renaming all the function and changing the structure. **PLEASE NOTE: this project (currently `version 0`) will not be stable until `version 1`.** Contact me (I don't have a mailing list) to be notified when this becomes stable and complete (probably not for another year).
 ![for_each_promise_all](docs/examples/for_each_promise_all.png)
+
 <p>&nbsp;</p>
 
 # Also check out:
-- [numjs](https://github.com/nicolaspanel/numjs){:target="_blank"} - JS version of Python's numpy
-- [javascript-algorithms](https://github.com/trekhleb/javascript-algorithms) - llists, stack, hash, trees, etc
-- [_](https://lodash.com/docs/4.17.15) - lodash documentation
+
+- <a href="https://github.com/nicolaspanel/numjs" target="_blank">numjs</a> - JS version of Python's numpy
+- <a href="https://github.com/trekhleb/javascript-algorithms" target="_blank">javascript-algorithms</a> - llists, stack, hash, trees, etc
+- <a href="https://lodash.com/docs/4.17.15" target="_blank">\_</a> - lodash documentation
 <p>&nbsp;</p>
 
 # Installation:
 
 ## Node.js ES6 Modules
+
 High five! Shake that tree!
-  ```
-  // NOTE: import from "esm" folder:
-  import { sort_by_rating_and_position } from "pauls-pure-functions/esm/sort_strings"
-  // or:
-  import * as string_sort_functions from "pauls-pure-functions/esm/sort_strings"
-  // or:
-  import everything from "pauls-pure-functions"
-  ```
+
+```
+// NOTE: import from "esm" folder:
+import { sort_by_rating_and_position } from "pauls-pure-functions/esm/sort_strings"
+// or:
+import * as string_sort_functions from "pauls-pure-functions/esm/sort_strings"
+// or:
+import everything from "pauls-pure-functions"
+```
 
 ## Node.js Common JS
+
 consider converting your project to {"type":"module"}. Or use the handy [npm esm package](https://www.npmjs.com/package/esm)
-  ```
-  // NOTE: import from "cjs" folder:
-  const string_sort_functions = require("pauls-pure-functions/esm/sort_strings")
-  // or get everything:
-  const everything = require("pauls-pure-functions")
-  ```
+
+```
+// NOTE: import from "cjs" folder:
+const string_sort_functions = require("pauls-pure-functions/esm/sort_strings")
+// or get everything:
+const everything = require("pauls-pure-functions")
+```
 
 ## Browser
-this script will create a `window.__` variable** with a flat list of functions. This is different. In Node, you import/require and you choose what to call each variable. **Replace "__" with a specific version number!**
+
+this script will create a `window.__` variable with a flat list of functions. This is different. In Node, you import/require and you choose what to call each variable. **Replace "\_\_" with a specific version number!**
+
 ```
   <!-- NOTE: import from "__" folder -->
   <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/__/index.js"></script>
@@ -59,8 +69,8 @@ this script will create a `window.__` variable** with a flat list of functions. 
   <!-- or get a specific set of functions, without loading the whole library: -->
   <script src="https://cdn.jsdelivr.net/gh/paulshorey/pauls-pure-functions@latest/__/sort_strings.js"></script>
 ```
-The newly created `window.__` object of functions will contain one object called `_map`. It's a reference to which file each function originates from.
 
+The newly created `window.__` object of functions will contain one object called `_map`. It's a reference to which file each function originates from.
 
 <p>&nbsp;</p>
 
@@ -69,21 +79,26 @@ The newly created `window.__` object of functions will contain one object called
 ### For example: `sort_by_rating_and_position()` algorithmic sort function:
 
 You have a list of cities, ordered from your most to least favorite, and a cost of living index for each:
+
 ```
 let cities = ['Zurich', 'Paris', 'Kansas City', 'New York', 'Copenhagen', 'Duluth']
 let ratings = { 'Zurich':1, 'Paris':1, 'Kansas City':10, 'New York':5, 'Copenhagen':5, 'Duluth':7 }
 
 console.log(sort_by_rating_and_position(cities, ratings, 0.1))
 ```
+
 The output will be something like this:
+
 ```
 ['Kansas City', 'New York', 'Duluth', 'Copenhagen', 'Zurich', 'Paris']
 ```
+
 'Kansas City' jumped 2 spots, because it's rating was very high. Duluth jumped one spot ahead because it's rating was also pretty high. The first 2 cities dropped far down because their ratings were very low compared to the others.
 
 The third parameter specifies how much preference is given to the original order. High number will make it hardly budge at all. Low number will make higher rated items float to the top more easily. See [documentation](#documentation-coming-soon).
 
 This is much more useful with a much larger dataset of course!
+
 <p>&nbsp;</p>
 
 ### Universal functions:
